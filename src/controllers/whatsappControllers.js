@@ -7,7 +7,7 @@ const verifyToken = (req, res) => {
           var accessToken = "ARK23442TBUIAD3244LKJFSJS34534";
           var token = req.query["hub.verify_token"];
           var challenge = req.query["hub.challenge"]; // es lo que debemos devolver al Whatsapp una vez que verificamos  que el token que nos da Whatsapp igual al token que hemos construido.
-          // console.log(token);
+          console.log(token);
           if (challenge != null && token != null && token == accessToken){
                res.send(challenge)
           }else{
